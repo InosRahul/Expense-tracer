@@ -14,7 +14,7 @@ Vue.use(VueApollo)
 const AUTH_TOKEN = 'apollo-token'
 
 // Http endpoint
-const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'https://expense-tracer.herokuapp.com/v1alpha1/graphql'
+const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || 'https://expense-tracer.herokuapp.com/console'
 // Files URL root
 export const filesRoot = process.env.VUE_APP_FILES_ROOT || httpEndpoint.substr(0, httpEndpoint.indexOf('/graphql'))
 
@@ -26,7 +26,7 @@ const defaultOptions = {
   httpEndpoint,
   // You can use `wss` for secure connection (recommended in production)
   // Use `null` to disable subscriptions
-  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'wss://expense-tracer.herokuapp.com/v1alpha1/graphql',
+  wsEndpoint: process.env.VUE_APP_GRAPHQL_WS || 'wss://expense-tracer.herokuapp.com/console',
   // LocalStorage token
   tokenName: AUTH_TOKEN,
   // Enable Automatic Query persisting with Apollo Engine
